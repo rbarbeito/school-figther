@@ -1,3 +1,4 @@
+import { RouterLink } from 'vue-router';
 <template>
   <section
     class="bg-red-700 landscape:bg-[url('/07.gif')] bg-no-repeat bg-center bg-cover w-screen h-screen flex justify-center items-center"
@@ -12,8 +13,12 @@
         <option value="">Elije un escenario</option>
       </select>
       <div class="flex gap-8 w-8/12 justify-center item-center">
-        <button class="btn bg-red-600 mt-8 text-white">Volver</button>
-        <button class="btn bg-purple-800 mt-8 text-white">Continuar</button>
+        <router-link :to="{ name: 'personajes' }">
+          <button class="btn bg-red-600 mt-8 text-white">Volver</button>
+        </router-link>
+        <router-link :to="{ name: 'combate' }">
+          <button class="btn bg-purple-800 mt-8 text-white">Continuar</button>
+        </router-link>
       </div>
     </div>
   </section>
